@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_teste_testes",
+  "info": {
+    "name": "teste",
+    "icon": "bacon"
+  },
+  "options": {},
+  "attributes": {
+    "adsad": {
+      "type": "integer"
+    }
+  }
+}
