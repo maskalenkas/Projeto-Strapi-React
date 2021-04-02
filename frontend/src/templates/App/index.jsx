@@ -3,9 +3,11 @@ import * as Styled from './styles';
 function Home() {
   return (
     <div className="App">
-      <Styled.Wrapper>
-        <h1>Hello</h1>
-      </Styled.Wrapper>
+      <Styled.divA>
+        <h1>DIV A1</h1>
+        <h1>DIV A2</h1>
+        <Styled.Titulo>Titulo</Styled.Titulo>
+      </Styled.divA>
     </div>
   );
 }
