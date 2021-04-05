@@ -14,7 +14,7 @@ export default {
     light: { type: 'boolean' },
   },
 
-  // Os parametros, para o proprio heading
+  // Os parametros, para o proprio heading (a pasta pai de tudo)
   parameters: {
     backgrounds: {
       default: 'dark',
