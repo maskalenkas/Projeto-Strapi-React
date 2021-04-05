@@ -3,18 +3,14 @@ import { Heading } from '.';
 export default {
   title: 'Heading',
   component: Heading,
-  // Vão ser passados para o componente heading
   args: {
-    children: 'Não sei',
-    light: 'false',
+    children: 'O texto está escuro',
+    colorDark: false,
   },
-  // Os tipos de argumentos passados
   argTypes: {
     children: { type: 'string' },
-    light: { type: 'boolean' },
+    colorDark: { type: 'boolean' },
   },
-
-  // Os parametros, para o proprio heading (a pasta pai de tudo)
   parameters: {
     backgrounds: {
       default: 'dark',
@@ -22,17 +18,16 @@ export default {
   },
 };
 
+export const colorDark = (args) => <Heading {...args} />;
 export const Dark = (args) => <Heading {...args} />;
-export const Light = (args) => <Heading {...args} />;
 
-// Mais especificidade
-Light.parameters = {
+colorDark.parameters = {
   backgrounds: {
-    default: 'light',
+    default: 'colorDark',
   },
 };
 
-Light.args = {
-  children: 'O texto era claro',
-  light: false,
+Dark.args = {
+  children: 'O texto está claro',
+  colorDark: true,
 };
