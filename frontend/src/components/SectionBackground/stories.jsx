@@ -1,10 +1,16 @@
 import { SectionBackground } from '.';
+import { SectionContainer } from '../SectionContainer';
 
 export default {
   title: 'SectionBackground',
   component: SectionBackground,
   args: {
-    children: 'SectionBackground',
+    children: (
+      <div>
+        <h1>um titulo</h1>
+        <p>um texto</p>
+      </div>
+    ),
   },
   argTypes: {
     children: { type: 'string' },
