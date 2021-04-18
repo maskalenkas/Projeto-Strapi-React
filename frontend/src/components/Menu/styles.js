@@ -20,6 +20,7 @@ export const Container = styled.div`
     background: ${theme.colors.white};
     transition: all 300ms ease-in-out;
 
+    /*  Tirando as configurações padrões de ambos (section e heading) */
     & ${SectionContainer} {
       padding-top: 0;
       padding-bottom: 0;
@@ -32,19 +33,19 @@ export const Container = styled.div`
 
     @media ${theme.media.lteMedium} {
       height: 100vh;
+      /* Esta como visibility e não display para criar uma transição */
       visibility: hidden;
       opacity: 0;
+      /* Mudando a visibilidade caso o botão do menu tenha sido apertado */
       ${menuIsVisible && menuVisible(theme)}
 
       & ${SectionContainer} {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
         height: 100vh;
         align-items: center;
         overflow-y: auto;
       }
 
+      /* O "Logo" */
       & ${Heading} {
         padding-bottom: ${theme.spacings.large};
         display: flex;
@@ -52,6 +53,7 @@ export const Container = styled.div`
       }
 
       & ${LinksContainer} {
+        /* direção column e wrap */
         flex-flow: column wrap;
         align-items: center;
       }
@@ -66,6 +68,7 @@ export const MenuContainer = styled.div`
     align-items: center;
 
     @media ${theme.media.lteMedium} {
+      /* Vai ficar um menu por coluna */
       display: block;
       text-align: center;
       padding: ${theme.spacings.xxlarge} 0;
@@ -84,10 +87,13 @@ export const Button = styled.button`
     background: ${theme.colors.primaryColor};
     color: ${theme.colors.white};
     border: none;
+    /* Vai mudar com o mediaQuery */
     display: none;
+    /* Fazendo com que caso o menu esteja aberto, feche ele em qualquer lugar clicado */
     pointer-events: ${menuIsVisible ? 'none' : 'all'};
 
     @media ${theme.media.lteMedium} {
+    /* Tornando visivel */
       display:flex
       align-items: center;
       justify-content: center;
