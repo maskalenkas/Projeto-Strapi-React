@@ -8,6 +8,8 @@ export const GlobalStyles = createGlobalStyle`
   }
   html {
     font-size: 62.5%;
+    //Deixando a navegação no botão para topo fluida
+    scroll-behavior: smooth;
   }
   body {
     font-size: 1.6rem;
