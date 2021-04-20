@@ -17,6 +17,12 @@ export const Grid = styled.div`
     /* O minimo é 280px e o normal é 1fr. Vai repetir para cada um dos elementos */
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: ${theme.spacings.large};
+
+    @media ${theme.media.lteMedium} {
+      grid-template-columns: 1fr;
+      width: 90%;
+      margin: 0 auto;
+    }
   `}
 `;
 

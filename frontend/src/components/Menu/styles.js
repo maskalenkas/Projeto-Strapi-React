@@ -57,6 +57,13 @@ export const Container = styled.div`
         flex-flow: column wrap;
         align-items: center;
       }
+
+      & ${MenuContainer} {
+        /* Vai ficar um menu por coluna */
+        display: block;
+        text-align: center;
+        padding: ${theme.spacings.xxlarge} 0;
+      }
     }
   `}
 `;
@@ -66,13 +73,6 @@ export const MenuContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    @media ${theme.media.lteMedium} {
-      /* Vai ficar um menu por coluna */
-      display: block;
-      text-align: center;
-      padding: ${theme.spacings.xxlarge} 0;
-    }
   `}
 `;
 
@@ -93,7 +93,7 @@ export const Button = styled.button`
     pointer-events: ${menuIsVisible ? 'none' : 'all'};
 
     @media ${theme.media.lteMedium} {
-    /* Tornando visivel */
+    /* Tornando visivel o botao */
       display:flex
       align-items: center;
       justify-content: center;
