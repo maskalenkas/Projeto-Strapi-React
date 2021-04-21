@@ -3,11 +3,7 @@ import { mockBase } from '../Base/stories';
 import * as Styled from './styles';
 
 function Home() {
-  return (
-    <div className="App">
-      <Base {...mockBase} />
-    </div>
-  );
+  return <Base {...mockBase} />;
 }
 
 export default Home;
